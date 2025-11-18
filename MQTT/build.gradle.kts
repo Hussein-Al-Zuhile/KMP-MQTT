@@ -7,13 +7,13 @@ plugins {
     alias(libs.plugins.vanniktech.mavenPublish)
 }
 
-group = "io.github.kotlin"
+group = "io.github.hussein-al-zuhile"
 version = "1.0.0"
 
 kotlin {
     jvm()
     androidLibrary {
-        namespace = "org.jetbrains.kotlinx.multiplatform.library.template"
+        namespace = "io.github.hussein-al-zuhile.kmp-mqtt"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
 
@@ -60,31 +60,34 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates(group.toString(), "library", version.toString())
+    coordinates(group.toString(), "kmp-mqtt", version.toString())
 
     pom {
         name = "KMP - MQTT"
-        description = "A library for MQTT easy plug and play based on ktor-mqtt library."
-        inceptionYear = "2024"
-        url = "https://github.com/kotlin/multiplatform-library-template/"
+        description = "A library for MQTT easy plug and play usage, based on ktor-mqtt library."
+        inceptionYear = "2025"
+        url = "https://github.com/Hussein-Al-Zuhile/KMP-MQTT"
         licenses {
             license {
-                name = "XXX"
-                url = "YYY"
-                distribution = "ZZZ"
+                name = "The Apache License, Version 2.0"
+                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "https://www.apache.org/licenses/LICENSE-2.0.txt"
             }
         }
         developers {
             developer {
-                id = ""
+                id = "Hussein-Al-Zuhile"
                 name = "Hussein Al-Zuhile"
-                url = "ZZZ"
+                url = "https://github.com/Hussein-Al-Zuhile/"
+                email = "hosenzuh@gmail.com"
+                organization = "Hussein Al-Zuhile"
+                organizationUrl = "https://github.com/Hussein-Al-Zuhile/"
             }
         }
         scm {
-            url = "XXX"
-            connection = "YYY"
-            developerConnection = "ZZZ"
+            url = "https://github.com/Hussein-Al-Zuhile/KMP-MQTT"
+            connection = "scm:git:git://github.com/Hussein-Al-Zuhile/KMP-MQTT.git"
+            developerConnection = "scm:git:ssh://git@github.com/Hussein-Al-Zuhile/KMP-MQTT.git"
         }
     }
 }
