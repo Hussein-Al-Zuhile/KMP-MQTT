@@ -2,7 +2,6 @@ import com.android.build.api.dsl.androidLibrary
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 group = "io.github.hussein-al-zuhile"
-version = "1.0.1"
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -13,7 +12,7 @@ plugins {
 kotlin {
     jvm()
     androidLibrary {
-        namespace = "io.github.hussein-al-zuhile.kmp-mqtt"
+        namespace = "io.github.husseinAlZuhile.kmpMqtt"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
 
@@ -71,7 +70,8 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates(group.toString(), "kmp-mqtt", "1.0.1")
+    version = "1.0.2"
+    coordinates(group.toString(), "kmp-mqtt", version.toString())
 
     pom {
         name = "KMP - MQTT"
