@@ -71,7 +71,7 @@ mavenPublishing {
 
     signAllPublications()
 
-    coordinates(group.toString(), "kmp-mqtt", version.toString())
+    coordinates(group.toString(), "kmp-mqtt", "1.0.1")
 
     pom {
         name = "KMP - MQTT"
