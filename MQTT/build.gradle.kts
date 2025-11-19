@@ -1,14 +1,14 @@
 import com.android.build.api.dsl.androidLibrary
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
+group = "io.github.hussein-al-zuhile"
+version = "1.0.1"
+
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.android.kotlin.multiplatform.library)
     alias(libs.plugins.vanniktech.mavenPublish)
 }
-
-group = "io.github.hussein-al-zuhile"
-version = "1.0.1"
 
 kotlin {
     jvm()

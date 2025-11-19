@@ -7,7 +7,7 @@ A library for MQTT easy plug and play usage, based on ktor-mqtt library. This li
 Add the dependency to your `build.gradle.kts` file:
 
 ```kotlin
-implementation("io.github.hussein-al-zuhile:kmp-mqtt:1.0.0")
+implementation("io.github.hussein-al-zuhile:kmp-mqtt:1.0.1")
 ```
 
 ## Usage
