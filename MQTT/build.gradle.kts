@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "io.github.hussein-al-zuhile"
-version = "1.0.0"
+version = "1.0.1"
 
 kotlin {
     jvm()
@@ -38,11 +38,11 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             //noinspection UseTomlInstead
-            implementation("de.kempmobil.ktor.mqtt:mqtt-core:0.8.0")
-            implementation("de.kempmobil.ktor.mqtt:mqtt-client:0.8.0")
+            api("de.kempmobil.ktor.mqtt:mqtt-core:0.8.0")
+            api("de.kempmobil.ktor.mqtt:mqtt-client:0.8.0")
 
-            implementation("org.jetbrains.kotlinx:kotlinx-io-bytestring:0.8.0")
-            implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
+            api("org.jetbrains.kotlinx:kotlinx-io-bytestring:0.8.0")
+            api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
 
@@ -54,6 +54,17 @@ kotlin {
         }
     }
 }
+
+publishing {
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/hussein-al-zuhile/KMP-MQTT")
+        }
+    }
+}
+
 
 mavenPublishing {
     publishToMavenCentral()
